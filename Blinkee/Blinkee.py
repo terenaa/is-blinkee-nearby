@@ -65,6 +65,9 @@ class Blinkee:
         print(Utils.map_link(self._origin[0], self._origin[1], vehicles_nearby[0]["position"]["lat"],
                              vehicles_nearby[0]["position"]["lng"]))
 
+        if 1 == len(vehicles_nearby):
+            return
+
         print("\n* Other vehicles nearby:")
 
         for vehicle in vehicles_nearby[1:4]:
