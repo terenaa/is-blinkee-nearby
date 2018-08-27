@@ -94,7 +94,7 @@ class Blinkee:
 
         vehicles_ids = map(lambda v: v["id"], vehicles_nearby)
         vehicles_nearby_counter = len(vehicles_nearby)
-        new_vehicles = Utils.list_diff(vehicles_ids, last_vehicles)
+        new_vehicles = Utils.list_diff(vehicles_ids[:4], last_vehicles)
 
         try:
             self._cache.save(vehicles_ids)
